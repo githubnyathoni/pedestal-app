@@ -1,0 +1,247 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉main꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉main꞉> 
+nil
+; WARNING: requiring-resolve already refers to: #'clojure.core/requiring-resolve in namespace: datomic.common, being replaced by: #'datomic.common/requiring-resolve
+clj꞉db꞉> 
+#'db/db-uri
+clj꞉db꞉> 
+true
+clj꞉db꞉> 
+#'db/conn
+clj꞉db꞉> 
+#'db/sokuot-schema
+clj꞉db꞉> 
+#<promise$settable_future$reify__4751@1d321370: 
+  {:db-before datomic.db.Db@febaced3,
+   :db-after datomic.db.Db@274d031c,
+   :tx-data
+   [#datom[13194139534312 50 #inst "2022-05-10T15:52:07.037-00:00" 13194139534312 true] #datom[63 10 :sokuot/quote 13194139534312 true] #datom[63 40 23 13194139534312 true] #datom[63 41 35 13194139534312 true] #datom[63 62 "Isi quote" 13194139534312 true] #datom[64 10 :sokuot/cite 13194139534312 true] #datom[64 40 23 13194139534312 true] #datom[64 41 35 13194139534312 true] #datom[64 62 "Pencipta quote" 13194139534312 true] #datom[65 10 :sokuot/date 13194139534312 true] #datom[65 40 23 13194139534312 true] #datom[65 41 35 13194139534312 true] #datom[65 62 "Tanggal dibuat data quote" 13194139534312 true] #datom[0 13 65 13194139534312 true] #datom[0 13 64 13194139534312 true] #datom[0 13 63 13194139534312 true]],
+   :tempids {-9223367638809264706 63, -9223301668109598141 64, -9223301668109598140 65}}>
+clj꞉db꞉> 
+#'db/delete-quote
+clj꞉db꞉> 
+#'db/now
+clj꞉db꞉> 
+#'db/sokuot-tx
+clj꞉db꞉> 
+#'db/create-quote
+clj꞉db꞉> 
+#'db/all-quotes
+clj꞉db꞉> 
+#<promise$settable_future$reify__4751@1e7030b5: 
+  {:db-before datomic.db.Db@274d031c,
+   :db-after datomic.db.Db@983654a7,
+   :tx-data
+   [#datom[13194139534313 50 #inst "2022-05-10T15:52:46.321-00:00" 13194139534313 true] #datom[17592186045418 63 "mantep" 13194139534313 true] #datom[17592186045418 64 "thoni" 13194139534313 true] #datom[17592186045418 65 "10 May 2022 at 10:52 PM" 13194139534313 true]],
+   :tempids {-9223350046623220293 17592186045418}}>
+clj꞉db꞉> 
+(#:db{:id 17592186045418})
+clj꞉db꞉> 
+; Syntax error compiling at (src/db.clj:52:1).
+; Unable to resolve symbol: all in this context
+clj꞉db꞉> 
+; Syntax error compiling def at (src/db.clj:50:1).
+; Too many arguments to def
+clj꞉db꞉> 
+#'db/all
+clj꞉db꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: db$all
+clj꞉db꞉> 
+datomic.db.Db@983654a7
+clj꞉db꞉> 
+#'db/all
+clj꞉db꞉> 
+; Execution error (ClassCastException) at db/eval23399 (form-init9279760689788063881.clj:51).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉db꞉> 
+("mantep")
+clj꞉db꞉> 
+; Syntax error compiling at (src/db.clj:53:3).
+; Unable to resolve symbol: date in this context
+clj꞉db꞉> 
+("10 May 2022 at 10:52 PM")
+clj꞉db꞉> 
+#<promise$settable_future$reify__4751@32dfacaa: 
+  {:db-before datomic.db.Db@983654a7,
+   :db-after datomic.db.Db@2183f0bd,
+   :tx-data
+   [#datom[13194139534315 50 #inst "2022-05-10T15:55:01.139-00:00" 13194139534315 true] #datom[17592186045418 63 "mantep" 13194139534315 false] #datom[17592186045418 64 "thoni" 13194139534315 false] #datom[17592186045418 65 "10 May 2022 at 10:52 PM" 13194139534315 false]],
+   :tempids {}}>
+clj꞉db꞉> 
+#'db/all
+clj꞉db꞉> 
+; Execution error (ClassCastException) at db/eval23444 (form-init9279760689788063881.clj:51).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉db꞉> 
+#'db/all
+clj꞉db꞉> 
+; Execution error (ClassCastException) at db/eval23447 (form-init9279760689788063881.clj:51).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉db꞉> 
+()
+clj꞉db꞉> 
+#'db/all
+clj꞉db꞉> 
+; Execution error (ClassCastException) at db/eval23453 (form-init9279760689788063881.clj:51).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉db꞉> 
+nil
+clj꞉main꞉> 
+#'main/hello-world
+clj꞉main꞉> 
+; Execution error (AssertionError) at io.pedestal.http.route.definition.terse/eval10983$fn (terse.clj:52).
+; Assert failed: Cannot expand '[http/html-body (body-params)]' as a route. Expected a verb map or path string, but found a class clojure.lang.PersistentVector instead
+false
+clj꞉main꞉> 
+; Execution error (ExceptionInfo) at io.pedestal.http.route.definition/symbol->keyword (definition.clj:24).
+; Could not resolve symbol
+clj꞉main꞉> 
+nil
+clj꞉main꞉> 
+nil
+clj꞉main꞉> 
+#'main/hello-world
+clj꞉main꞉> 
+; Execution error (ExceptionInfo) at io.pedestal.http.route.definition/symbol->keyword (definition.clj:24).
+; Could not resolve symbol
+clj꞉main꞉> 
+#'main/routing
+clj꞉main꞉> 
+#'main/service
+clj꞉main꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉main꞉> 
+; Jack-in done.
+clj꞉main꞉> 
+nil
+clj꞉main꞉> 
+#'main/hello-world
+clj꞉main꞉> 
+#'main/routes
+clj꞉main꞉> 
+#'main/modified-namespaces
+clj꞉main꞉> 
+#'main/service
+clj꞉main꞉> 
+nil
+clj꞉sokuot꞉> 
+#'sokuot/index
+clj꞉sokuot꞉> 
+#'sokuot/create
+clj꞉sokuot꞉> 
+#'sokuot/delete
+clj꞉sokuot꞉> 
+nil
+clj꞉view꞉> 
+#'view/sokuot-form
+clj꞉view꞉> 
+#'view/delete-sokuot-form
+clj꞉view꞉> 
+#'view/sokuot-index
+clj꞉view꞉> 
+nil
+clj꞉db꞉> 
+#'db/db-uri
+clj꞉db꞉> 
+false
+clj꞉db꞉> 
+#'db/conn
+clj꞉db꞉> 
+#'db/sokuot-schema
+clj꞉db꞉> 
+#<promise$settable_future$reify__4751@547d5b90: 
+  {:db-before datomic.db.Db@dea4749d,
+   :db-after datomic.db.Db@71fd0718,
+   :tx-data
+   [#datom[13194139534313 50 #inst "2022-05-10T16:26:41.685-00:00" 13194139534313 true] #datom[0 19 65 13194139534313 true] #datom[0 19 64 13194139534313 true] #datom[0 19 63 13194139534313 true]],
+   :tempids {-9223367638809264709 63, -9223301668109598138 64, -9223301668109598137 65}}>
+clj꞉db꞉> 
+#'db/now
+clj꞉db꞉> 
+#'db/sokuot-tx
+clj꞉db꞉> 
+#'db/create-quote
+clj꞉db꞉> 
+#'db/all-quotes
+clj꞉db꞉> 
+#'db/delete-quote
+clj꞉db꞉> 
+; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
+clj꞉main꞉> 
+nil
+clj꞉main꞉> 
+; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
+clj꞉main꞉> 
+; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
+clj꞉main꞉> 
+; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/home}, compiling:(form-init2954969322029001061.clj:19:1) 
+clj꞉main꞉> 
+; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol sokuot/home}, compiling:(form-init2954969322029001061.clj:19:1) 
+clj꞉main꞉> 
+; CompilerException java.lang.RuntimeException: No such var: view/home, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/sokuot/src/sokuot.clj:26:13) 
+clj꞉sokuot꞉> 
+nil
+clj꞉sokuot꞉> 
+; CompilerException java.lang.RuntimeException: No such var: view/home, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/sokuot/src/sokuot.clj:26:13) 
+clj꞉sokuot꞉> 
+#'view/home
+clj꞉view꞉> 
+nil
+clj꞉sokuot꞉> 
+#'sokuot/home
+clj꞉sokuot꞉> 
+#'main/routes
+clj꞉main꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉main꞉> 
+; Jack-in done.
+clj꞉main꞉> 
+nil
+clj꞉main꞉> 
+nil
+clj꞉sokuot.sokuot꞉> 
+nil
+clj꞉sokuot.view꞉> 
+nil
+clj꞉sokuot.db꞉> 
