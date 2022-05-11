@@ -36,11 +36,30 @@
          "Simpen boy")]]]]])
 
 (defn delete-sokuot-form [quote]
-  [:form {:action (url-for :sokuot#delete
-                           :params {:id (:db/id quote)}
-                           :method-param "_method")
-          :method :post}
-   [:button.btn.btn-danger {:type "submit"} "Apus ngab"]])
+  [:div
+   [:button.btn.btn-danger {:data-bs-toggle "modal"
+                            :data-bs-target "#confirmationModal"}
+    "Apus ngab"]
+   [:div.modal.fade {:id "confirmationModal"
+                     :tabindex "-1"
+                     :aria-labelledby "confirmationModalLabel"
+                     :aria-hidden "true"}
+    [:div.modal-dialog.modal-dialog-centered
+     [:div.modal-content
+      [:div.modal-header
+       [:h5.modal-title "Menghapus quotemu~"]
+       [:button.btn-close {:data-bs-dismiss "modal"
+                           :aria-label "Close"}]]
+      [:div.modal-body
+       [:p "Apakah anda ingin mengunci pilihan anda?"]]
+      [:div.modal-footer
+       [:button.btn.btn-secondary {:data-bs-dismiss "modal"} "Pen berak"]
+       [:form {:action (url-for :sokuot#delete
+                                :params {:id (:db/id quote)}
+                                :method-param "_method")
+               :method :post}
+        [:button.btn.btn-danger {:type "submit"} "Jengjet"]]]]]]
+   ])
 
 (defn edit-sokuot-form [quote]
   [:form {:action (url-for :sokuot#edit
@@ -54,7 +73,9 @@
           (rand-nth [["\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\"" "— Patrick Star"]
                      ["\"Kosong adalah isi, isi adalah kosong\"" "— Prajnaparamitahrdaya Sutra"]
                      ["\"Experience is the best teacher\"" "— Buku Sidu"]
-                     ["\"Hey Patrick, kau tau apa yang lebih lucu dari 24? 25\"" "— Spongebob Squarepants"]])))
+                     ["\"Hey Patrick, kau tau apa yang lebih lucu dari 24? 25\"" "— Spongebob Squarepants"]
+                     ["\"Makan cinta, berak lope\"" "— Mas mas Tiktok"]
+                     ["\"Kamu di mana, dengan siapa, semalam berbuat apa?\"" "— Kangen Band"]])))
 
 (defn sokuot-index [quotes & [quote]]
   (let [quote-nil (rand-quote)]
@@ -116,6 +137,6 @@
              [:div.card-body
               [:h5.card-title "Sokuot"]
               [:p.card-text "Aplikasi untuk menyimpan quote favorit agan-agan. 
-                             CRUD sederhana tapi kok mayan syulit make Clojure"]
+                             CRUD sederhana tapi kok mayan syulit make Clojure~"]
               [:div.d-flex.justify-content-end
                [:a.btn.btn-primary {:href "/sokuot"} "Kesini bang"]]]]]]]))
