@@ -14,7 +14,9 @@
      ["/" {:get [:home sokuot/home]}]
      ["/sokuot" {:get [:sokuot sokuot/index]
                  :post [:sokuot#create sokuot/create]}
-      ["/:id" {:delete [:sokuot#delete sokuot/delete]}]]]]])
+      ["/:id" {:delete [:sokuot#delete sokuot/delete]
+               :edit [:sokuot#edit sokuot/edit]
+               :edited [:sokuot#edited sokuot/edited]}]]]]])
 
 (def modified-namespaces (ns-tracker "src"))
 
