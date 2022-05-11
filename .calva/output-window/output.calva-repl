@@ -18,210 +18,178 @@
 clj꞉main꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉main꞉> 
+#'sokuot.view/string->integer
+clj꞉sokuot.view꞉> 
+; ClassCastException class java.lang.Long cannot be cast to class java.lang.String (java.lang.Long and java.lang.String are in module java.base of loader 'bootstrap')  sokuot.view/string->integer (form-init4979433452787625969.clj:92)
+clj꞉sokuot.view꞉> 
+10
+clj꞉sokuot.view꞉> 
+#'sokuot.view/foo
+clj꞉sokuot.view꞉> 
+Required argument a is 10
+Optional argument b is nil
 nil
-; WARNING: requiring-resolve already refers to: #'clojure.core/requiring-resolve in namespace: datomic.common, being replaced by: #'datomic.common/requiring-resolve
-clj꞉db꞉> 
-#'db/db-uri
-clj꞉db꞉> 
-true
-clj꞉db꞉> 
-#'db/conn
-clj꞉db꞉> 
-#'db/sokuot-schema
-clj꞉db꞉> 
-#<promise$settable_future$reify__4751@1d321370: 
-  {:db-before datomic.db.Db@febaced3,
-   :db-after datomic.db.Db@274d031c,
+clj꞉sokuot.view꞉> 
+#'sokuot.view/foo
+clj꞉sokuot.view꞉> 
+Optional argument b is 10
+nil
+clj꞉sokuot.view꞉> 
+Optional argument b is nil
+nil
+clj꞉sokuot.view꞉> 
+#'sokuot.view/foo
+clj꞉sokuot.view꞉> 
+Optional argument b is nil
+nil
+clj꞉sokuot.view꞉> 
+#'sokuot.db/edited-quote
+clj꞉sokuot.db꞉> 
+#'sokuot.db/edited-quote
+clj꞉sokuot.db꞉> 
+nil
+clj꞉sokuot.db꞉> 
+#'sokuot.db/db-uri
+clj꞉sokuot.db꞉> 
+false
+clj꞉sokuot.db꞉> 
+#'sokuot.db/conn
+clj꞉sokuot.db꞉> 
+#'sokuot.db/sokuot-schema
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@5ea8ba30: 
+  {:db-before datomic.db.Db@f62c5417,
+   :db-after datomic.db.Db@915bc7ff,
    :tx-data
-   [#datom[13194139534312 50 #inst "2022-05-10T15:52:07.037-00:00" 13194139534312 true] #datom[63 10 :sokuot/quote 13194139534312 true] #datom[63 40 23 13194139534312 true] #datom[63 41 35 13194139534312 true] #datom[63 62 "Isi quote" 13194139534312 true] #datom[64 10 :sokuot/cite 13194139534312 true] #datom[64 40 23 13194139534312 true] #datom[64 41 35 13194139534312 true] #datom[64 62 "Pencipta quote" 13194139534312 true] #datom[65 10 :sokuot/date 13194139534312 true] #datom[65 40 23 13194139534312 true] #datom[65 41 35 13194139534312 true] #datom[65 62 "Tanggal dibuat data quote" 13194139534312 true] #datom[0 13 65 13194139534312 true] #datom[0 13 64 13194139534312 true] #datom[0 13 63 13194139534312 true]],
-   :tempids {-9223367638809264706 63, -9223301668109598141 64, -9223301668109598140 65}}>
-clj꞉db꞉> 
-#'db/delete-quote
-clj꞉db꞉> 
-#'db/now
-clj꞉db꞉> 
-#'db/sokuot-tx
-clj꞉db꞉> 
-#'db/create-quote
-clj꞉db꞉> 
-#'db/all-quotes
-clj꞉db꞉> 
-#<promise$settable_future$reify__4751@1e7030b5: 
-  {:db-before datomic.db.Db@274d031c,
-   :db-after datomic.db.Db@983654a7,
+   [#datom[13194139534313 50 #inst "2022-05-11T06:27:53.433-00:00" 13194139534313 true] #datom[0 19 65 13194139534313 true] #datom[0 19 64 13194139534313 true] #datom[0 19 66 13194139534313 true] #datom[0 19 63 13194139534313 true]],
+   :tempids {-9223367638809264710 63, -9223301668109598137 64, -9223301668109598136 65, -9223301668109598135 66}}>
+clj꞉sokuot.db꞉> 
+#'sokuot.db/now
+clj꞉sokuot.db꞉> 
+#'sokuot.db/sokuot-tx
+clj꞉sokuot.db꞉> 
+#'sokuot.db/create-quote
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all-quotes
+clj꞉sokuot.db꞉> 
+#'sokuot.db/delete-quote
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@55cf33cb: 
+  {:db-before datomic.db.Db@915bc7ff,
+   :db-after datomic.db.Db@16f5a7b2,
    :tx-data
-   [#datom[13194139534313 50 #inst "2022-05-10T15:52:46.321-00:00" 13194139534313 true] #datom[17592186045418 63 "mantep" 13194139534313 true] #datom[17592186045418 64 "thoni" 13194139534313 true] #datom[17592186045418 65 "10 May 2022 at 10:52 PM" 13194139534313 true]],
-   :tempids {-9223350046623220293 17592186045418}}>
-clj꞉db꞉> 
-(#:db{:id 17592186045418})
-clj꞉db꞉> 
-; Syntax error compiling at (src/db.clj:52:1).
-; Unable to resolve symbol: all in this context
-clj꞉db꞉> 
-; Syntax error compiling def at (src/db.clj:50:1).
-; Too many arguments to def
-clj꞉db꞉> 
-#'db/all
-clj꞉db꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: db$all
-clj꞉db꞉> 
-datomic.db.Db@983654a7
-clj꞉db꞉> 
-#'db/all
-clj꞉db꞉> 
-; Execution error (ClassCastException) at db/eval23399 (form-init9279760689788063881.clj:51).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉db꞉> 
-("mantep")
-clj꞉db꞉> 
-; Syntax error compiling at (src/db.clj:53:3).
-; Unable to resolve symbol: date in this context
-clj꞉db꞉> 
-("10 May 2022 at 10:52 PM")
-clj꞉db꞉> 
-#<promise$settable_future$reify__4751@32dfacaa: 
-  {:db-before datomic.db.Db@983654a7,
-   :db-after datomic.db.Db@2183f0bd,
+   [#datom[13194139534314 50 #inst "2022-05-11T06:28:19.373-00:00" 13194139534314 true] #datom[17592186045419 63 "aku adalah kamu" 13194139534314 true] #datom[17592186045419 64 "dia" 13194139534314 true] #datom[17592186045419 65 "11 May 2022 at 01:27 PM" 13194139534314 true] #datom[17592186045419 66 false 13194139534314 true]],
+   :tempids {-9223350046623220298 17592186045419}}>
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/invalid-data-source class java.lang.Long is not a valid data source type.  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+({:db/id 17592186045419})
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+; ClassCastException class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')  sokuot.db/eval18748 (form-init4979433452787625969.clj:63)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+({:db/id 17592186045419})
+clj꞉sokuot.db꞉> 
+nil
+clj꞉sokuot.db꞉> 
+; IllegalArgumentException Don't know how to create ISeq from: sokuot.db$all  clojure.lang.RT.seqFrom (RT.java:542)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("aku adalah kamu")
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@1c29cdf8: 
+  {:db-before datomic.db.Db@16f5a7b2,
+   :db-after datomic.db.Db@f00ef992,
    :tx-data
-   [#datom[13194139534315 50 #inst "2022-05-10T15:55:01.139-00:00" 13194139534315 true] #datom[17592186045418 63 "mantep" 13194139534315 false] #datom[17592186045418 64 "thoni" 13194139534315 false] #datom[17592186045418 65 "10 May 2022 at 10:52 PM" 13194139534315 false]],
+   [#datom[13194139534316 50 #inst "2022-05-11T06:30:48.253-00:00" 13194139534316 true] #datom[17592186045419 63 "baru" 13194139534316 true] #datom[17592186045419 63 "aku adalah kamu" 13194139534316 false]],
    :tempids {}}>
-clj꞉db꞉> 
-#'db/all
-clj꞉db꞉> 
-; Execution error (ClassCastException) at db/eval23444 (form-init9279760689788063881.clj:51).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉db꞉> 
-#'db/all
-clj꞉db꞉> 
-; Execution error (ClassCastException) at db/eval23447 (form-init9279760689788063881.clj:51).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉db꞉> 
-()
-clj꞉db꞉> 
-#'db/all
-clj꞉db꞉> 
-; Execution error (ClassCastException) at db/eval23453 (form-init9279760689788063881.clj:51).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉db꞉> 
-nil
-clj꞉main꞉> 
-#'main/hello-world
-clj꞉main꞉> 
-; Execution error (AssertionError) at io.pedestal.http.route.definition.terse/eval10983$fn (terse.clj:52).
-; Assert failed: Cannot expand '[http/html-body (body-params)]' as a route. Expected a verb map or path string, but found a class clojure.lang.PersistentVector instead
-false
-clj꞉main꞉> 
-; Execution error (ExceptionInfo) at io.pedestal.http.route.definition/symbol->keyword (definition.clj:24).
-; Could not resolve symbol
-clj꞉main꞉> 
-nil
-clj꞉main꞉> 
-nil
-clj꞉main꞉> 
-#'main/hello-world
-clj꞉main꞉> 
-; Execution error (ExceptionInfo) at io.pedestal.http.route.definition/symbol->keyword (definition.clj:24).
-; Could not resolve symbol
-clj꞉main꞉> 
-#'main/routing
-clj꞉main꞉> 
-#'main/service
-clj꞉main꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉main꞉> 
-; Jack-in done.
-clj꞉main꞉> 
-nil
-clj꞉main꞉> 
-#'main/hello-world
-clj꞉main꞉> 
-#'main/routes
-clj꞉main꞉> 
-#'main/modified-namespaces
-clj꞉main꞉> 
-#'main/service
-clj꞉main꞉> 
-nil
-clj꞉sokuot꞉> 
-#'sokuot/index
-clj꞉sokuot꞉> 
-#'sokuot/create
-clj꞉sokuot꞉> 
-#'sokuot/delete
-clj꞉sokuot꞉> 
-nil
-clj꞉view꞉> 
-#'view/sokuot-form
-clj꞉view꞉> 
-#'view/delete-sokuot-form
-clj꞉view꞉> 
-#'view/sokuot-index
-clj꞉view꞉> 
-nil
-clj꞉db꞉> 
-#'db/db-uri
-clj꞉db꞉> 
-false
-clj꞉db꞉> 
-#'db/conn
-clj꞉db꞉> 
-#'db/sokuot-schema
-clj꞉db꞉> 
-#<promise$settable_future$reify__4751@547d5b90: 
-  {:db-before datomic.db.Db@dea4749d,
-   :db-after datomic.db.Db@71fd0718,
+clj꞉sokuot.db꞉> 
+("aku adalah kamu")
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("baru")
+clj꞉sokuot.db꞉> 
+(false)
+clj꞉sokuot.db꞉> 
+(false)
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@6b30350f: 
+  {:db-before datomic.db.Db@f00ef992,
+   :db-after datomic.db.Db@ceb7b88f,
    :tx-data
-   [#datom[13194139534313 50 #inst "2022-05-10T16:26:41.685-00:00" 13194139534313 true] #datom[0 19 65 13194139534313 true] #datom[0 19 64 13194139534313 true] #datom[0 19 63 13194139534313 true]],
-   :tempids {-9223367638809264709 63, -9223301668109598138 64, -9223301668109598137 65}}>
-clj꞉db꞉> 
-#'db/now
-clj꞉db꞉> 
-#'db/sokuot-tx
-clj꞉db꞉> 
-#'db/create-quote
-clj꞉db꞉> 
-#'db/all-quotes
-clj꞉db꞉> 
-#'db/delete-quote
-clj꞉db꞉> 
-; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
-clj꞉main꞉> 
-nil
-clj꞉main꞉> 
-; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
-clj꞉main꞉> 
-; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/pedestal-index}, compiling:(form-init2954969322029001061.clj:19:1) 
-clj꞉main꞉> 
-; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol view/home}, compiling:(form-init2954969322029001061.clj:19:1) 
-clj꞉main꞉> 
-; CompilerException clojure.lang.ExceptionInfo: Could not resolve symbol {:symbol sokuot/home}, compiling:(form-init2954969322029001061.clj:19:1) 
-clj꞉main꞉> 
-; CompilerException java.lang.RuntimeException: No such var: view/home, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/sokuot/src/sokuot.clj:26:13) 
-clj꞉sokuot꞉> 
-nil
-clj꞉sokuot꞉> 
-; CompilerException java.lang.RuntimeException: No such var: view/home, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/sokuot/src/sokuot.clj:26:13) 
-clj꞉sokuot꞉> 
-#'view/home
-clj꞉view꞉> 
-nil
-clj꞉sokuot꞉> 
-#'sokuot/home
-clj꞉sokuot꞉> 
-#'main/routes
-clj꞉main꞉> 
+   [#datom[13194139534317 50 #inst "2022-05-11T06:31:21.838-00:00" 13194139534317 true] #datom[17592186045422 63 "aku adalah kamu" 13194139534317 true] #datom[17592186045422 64 "dia" 13194139534317 true] #datom[17592186045422 65 "11 May 2022 at 01:27 PM" 13194139534317 true] #datom[17592186045422 66 false 13194139534317 true]],
+   :tempids {-9223350046623220299 17592186045422}}>
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+(false false)
+clj꞉sokuot.db꞉> 
+(false false)
+clj꞉sokuot.db꞉> 
+(false false)
+clj꞉sokuot.db꞉> 
+(false false)
+clj꞉sokuot.db꞉> 
+("baru" "aku adalah kamu")
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@75f88a8e: 
+  {:db-before datomic.db.Db@ceb7b88f,
+   :db-after datomic.db.Db@7ab8e734,
+   :tx-data
+   [#datom[13194139534319 50 #inst "2022-05-11T06:33:30.476-00:00" 13194139534319 true] #datom[17592186045419 63 "cek lagi" 13194139534319 true] #datom[17592186045419 63 "baru" 13194139534319 false]],
+   :tempids {}}>
+clj꞉sokuot.db꞉> 
+("baru" "aku adalah kamu")
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("cek lagi" "aku adalah kamu")
+clj꞉sokuot.db꞉> 
+(false false)
+clj꞉sokuot.db꞉> 
+("dia" "dia")
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@6fa1db63: 
+  {:db-before datomic.db.Db@7ab8e734,
+   :db-after datomic.db.Db@21d954f0,
+   :tx-data
+   [#datom[13194139534320 50 #inst "2022-05-11T06:34:26.945-00:00" 13194139534320 true] #datom[17592186045425 63 "aku adalah kamu" 13194139534320 true] #datom[17592186045425 64 "dia" 13194139534320 true] #datom[17592186045425 65 "11 May 2022 at 01:27 PM" 13194139534320 true] #datom[17592186045425 66 false 13194139534320 true]],
+   :tempids {-9223350046623220300 17592186045425}}>
+clj꞉sokuot.db꞉> 
+("dia" "dia")
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@8e4d042: 
+  {:db-before datomic.db.Db@21d954f0,
+   :db-after datomic.db.Db@836e0ccc,
+   :tx-data [#datom[13194139534322 50 #inst "2022-05-11T06:34:30.966-00:00" 13194139534322 true]],
+   :tempids {}}>
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("dia" "dia" "dia")
+clj꞉sokuot.db꞉> 
+("dia" "dia" "dia")
+clj꞉sokuot.db꞉> 
+#'sokuot.db/sokuot-schema
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@2108dc72: 
+  {:db-before datomic.db.Db@836e0ccc,
+   :db-after datomic.db.Db@49b66cd5,
+   :tx-data
+   [#datom[13194139534323 50 #inst "2022-05-11T06:34:59.719-00:00" 13194139534323 true] #datom[0 19 65 13194139534323 true] #datom[0 19 64 13194139534323 true] #datom[0 19 66 13194139534323 true] #datom[0 19 63 13194139534323 true]],
+   :tempids {-9223367638809264721 63, -9223367638809264722 64, -9223367638809264723 65, -9223367638809264724 66}}>
+clj꞉sokuot.db꞉> 
+#'sokuot.db/now
+clj꞉sokuot.db꞉> 
+#'sokuot.db/sokuot-tx
+clj꞉sokuot.db꞉> 
+#'sokuot.db/create-quote
+clj꞉sokuot.db꞉> 
 ; nREPL Connection was closed
 ; Jacking in...
 ; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
@@ -237,11 +205,307 @@ clj꞉main꞉> 
 clj꞉main꞉> 
 ; Jack-in done.
 clj꞉main꞉> 
+#<promise$settable_future$reify__4751@fd430df: 
+  {:db-before datomic.db.Db@b5ac43fa,
+   :db-after datomic.db.Db@5a0a642f,
+   :tx-data
+   [#datom[13194139534313 50 #inst "2022-05-11T06:35:53.726-00:00" 13194139534313 true] #datom[17592186045418 63 "aku adalah kamu" 13194139534313 true] #datom[17592186045418 64 "dia" 13194139534313 true] #datom[17592186045418 65 "11 May 2022 at 01:35 PM" 13194139534313 true] #datom[17592186045418 66 false 13194139534313 true]],
+   :tempids {-9223350046623220293 17592186045418}}>
+clj꞉sokuot.db꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: all in this context, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/pedestal-app/src/sokuot/db.clj:68:1) 
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/invalid-entity-id Invalid entity id: 17592186045419  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/edited-quote
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/invalid-entity-id Invalid entity id: 17592186045419  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
 nil
-clj꞉main꞉> 
-nil
+clj꞉sokuot.db꞉> 
+#'sokuot.db/db-uri
+clj꞉sokuot.db꞉> 
+false
+clj꞉sokuot.db꞉> 
+#'sokuot.db/conn
+clj꞉sokuot.db꞉> 
+#'sokuot.db/sokuot-schema
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all-quotes
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/invalid-entity-id Invalid entity id: 17592186045419  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+; ClassCastException class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')  sokuot.db/eval17173 (form-init15885271791935552412.clj:66)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+({:db/id 17592186045418})
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@7db84470: 
+  {:db-before datomic.db.Db@5a0a642f,
+   :db-after datomic.db.Db@bfbced43,
+   :tx-data
+   [#datom[13194139534315 50 #inst "2022-05-11T06:37:20.718-00:00" 13194139534315 true] #datom[17592186045418 63 "cek lagi" 13194139534315 true] #datom[17592186045418 63 "aku adalah kamu" 13194139534315 false]],
+   :tempids {}}>
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+("cek lagi")
+clj꞉sokuot.db꞉> 
+("cek lagi")
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+("cek lagi")
+clj꞉sokuot.db꞉> 
+; ArityException Wrong number of args (3) passed to: core/for  clojure.lang.Compiler.macroexpand1 (Compiler.java:6781)
+clj꞉sokuot.db꞉> 
+(nil)
+clj꞉sokuot.db꞉> 
+("dia")
+clj꞉sokuot.db꞉> 
+(["cek lagi" "dia"])
+clj꞉sokuot.db꞉> 
+#'sokuot.db/edited-quote
+clj꞉sokuot.db꞉> 
+; ClassCastException class clojure.lang.PersistentArrayMap cannot be cast to class java.util.List (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')  datomic.api/transact (api.clj:92)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/edited-quote
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@7cf2513d: 
+  {:db-before datomic.db.Db@bfbced43,
+   :db-after datomic.db.Db@d38a1a0c,
+   :tx-data
+   [#datom[13194139534316 50 #inst "2022-05-11T06:53:10.717-00:00" 13194139534316 true] #datom[17592186045418 64 "bisa ngga" 13194139534316 true] #datom[17592186045418 64 "dia" 13194139534316 false] #datom[17592186045418 66 true 13194139534316 true] #datom[17592186045418 66 false 13194139534316 false]],
+   :tempids {}}>
+clj꞉sokuot.db꞉> 
+(["cek lagi" "dia"])
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+(["cek lagi" "bisa ngga"])
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+(["cek lagi" "bisa ngga" true])
+clj꞉sokuot.db꞉> 
+#<promise$settable_future$reify__4751@73c43c9b: 
+  {:db-before datomic.db.Db@d38a1a0c,
+   :db-after datomic.db.Db@362692c9,
+   :tx-data
+   [#datom[13194139534317 50 #inst "2022-05-11T06:53:51.553-00:00" 13194139534317 true] #datom[17592186045422 63 "aku adalah kamu" 13194139534317 true] #datom[17592186045422 64 "dia" 13194139534317 true] #datom[17592186045422 65 "11 May 2022 at 01:35 PM" 13194139534317 true] #datom[17592186045422 66 false 13194139534317 true]],
+   :tempids {-9223350046623220302 17592186045422}}>
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+(["cek lagi" "bisa ngga" true] ["aku adalah kamu" "dia" false])
+clj꞉sokuot.db꞉> 
+#'sokuot.view/bis
+clj꞉sokuot.view꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: ds in this context, compiling:(/Users/ahmad-progen/Documents/Zenius/Clojure/pedestal-app/src/sokuot/view.clj:95:1) 
+clj꞉sokuot.view꞉> 
+"asdds"
+clj꞉sokuot.view꞉> 
+"asd"
+clj꞉sokuot.view꞉> 
+"asd"
+clj꞉sokuot.view꞉> 
+#'sokuot.view/bis
+clj꞉sokuot.view꞉> 
+true
+clj꞉sokuot.view꞉> 
+false
+clj꞉sokuot.view꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+(["cek lagi" "bisa ngga" true] ["aku adalah kamu" "dia" false])
+clj꞉sokuot.db꞉> 
+; ClassCastException class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')  sokuot.db/eval19041 (form-init15885271791935552412.clj:74)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/all
+clj꞉sokuot.db꞉> 
+({:db/id 17592186045418} {:db/id 17592186045422})
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/invalid-data-source class java.lang.Long is not a valid data source type.  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+; ClassCastException class java.lang.Long cannot be cast to class java.lang.String (java.lang.Long and java.lang.String are in module java.base of loader 'bootstrap')  sokuot.db/eval19055 (form-init15885271791935552412.clj:60)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/not-an-entity Unable to resolve entity: :db/id  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/not-an-entity Unable to resolve entity: :db/id  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+; IllegalArgumentExceptionInfo :db.error/not-an-entity Unable to resolve entity: :db/id  datomic.error/arg (error.clj:57)
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+{:db/id 17592186045418,
+ :sokuot/quote "cek lagi",
+ :sokuot/cite "bisa ngga",
+ :sokuot/date "11 May 2022 at 01:35 PM",
+ :sokuot/edited? true}
+clj꞉sokuot.db꞉> 
+{:db/id 17592186045422,
+ :sokuot/quote "aku adalah kamu",
+ :sokuot/cite "dia",
+ :sokuot/date "11 May 2022 at 01:35 PM",
+ :sokuot/edited? false}
+clj꞉sokuot.db꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+#'sokuot.sokuot/edit
 clj꞉sokuot.sokuot꞉> 
+#'sokuot.db/view-quote
+clj꞉sokuot.db꞉> 
+{:db/id 17592186045422,
+ :sokuot/quote "aku adalah kamu",
+ :sokuot/cite "dia",
+ :sokuot/date "11 May 2022 at 01:35 PM",
+ :sokuot/edited? false}
+clj꞉sokuot.db꞉> 
+"aku adalah kamu"
+clj꞉sokuot.db꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+; ArityException Wrong number of args (0) passed to: PersistentArrayMap  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+{:quote "dd", :cite "a"}
+clj꞉sokuot.view꞉> 
+{:quote "dds", :cite "dd"}
+clj꞉sokuot.view꞉> 
+{:quote "dds", :cite "dd"}
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+{:quote "\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\"", :cite "— Patrick Star"}
+clj꞉sokuot.view꞉> 
+nil
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+nil
+clj꞉sokuot.view꞉> 
+; ArityException Wrong number of args (1) passed to: view/rand-quote  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+"\"Kosong adalah isi, isi adalah kosong\""
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
 nil
 clj꞉sokuot.view꞉> 
 nil
-clj꞉sokuot.db꞉> 
+clj꞉sokuot.view꞉> 
+nil
+clj꞉sokuot.view꞉> 
+nil
+clj꞉sokuot.view꞉> 
+"\"Kosong adalah isi, isi adalah kosong\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Kosong adalah isi, isi adalah kosong\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Aku wumbo, kau wumbo, dia wumbo, wumboing, wumboung, wumbology!\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+"\"Kosong adalah isi, isi adalah kosong\""
+clj꞉sokuot.view꞉> 
+"\"Experience is the best teacher\""
+clj꞉sokuot.view꞉> 
+#'sokuot.view/nil-quote
+clj꞉sokuot.view꞉> 
+#'sokuot.view/rand-quote
+clj꞉sokuot.view꞉> 
+#'sokuot.view/nil-quote
+clj꞉sokuot.view꞉> 
