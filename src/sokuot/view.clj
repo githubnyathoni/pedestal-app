@@ -51,14 +51,14 @@
        [:button.btn-close {:data-bs-dismiss "modal"
                            :aria-label "Close"}]]
       [:div.modal-body
-       [:p "Apakah anda ingin mengunci pilihan anda?"]]
+       [:p "Beneran mo diapus nih?"]]
       [:div.modal-footer
-       [:button.btn.btn-secondary {:data-bs-dismiss "modal"} "Pen berak"]
+       [:button.btn.btn-secondary {:data-bs-dismiss "modal"} "Canda apus"]
        [:form {:action (url-for :sokuot#delete
                                 :params {:id (:db/id quote)}
                                 :method-param "_method")
                :method :post}
-        [:button.btn.btn-danger {:type "submit"} "Jengjet"]]]]]]
+        [:button.btn.btn-danger {:type "submit"} "Benengdor"]]]]]]
    ])
 
 (defn edit-sokuot-form [quote]
